@@ -1,0 +1,34 @@
+<!-- <h2>Countries And Countries State</h2>
+<select (change)="onCountrySelect($event)">
+    <option value=""><span style="background-color: aquamarine;text-align: center;">Select Country</span></option>
+    <option value="{{c.id}}" *ngFor="let c of   countries">
+        {{c.name}}
+    </option>
+</select>
+
+<select >
+    <option id="op" value="">Select State</option>
+    <option id="ops" value="{{s.id}}" *ngFor="let s of  states">
+        {{s.name}}
+    </option>
+</select> -->
+
+
+<div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+      
+        <button
+          class="btn btn-primary"
+          (click)="addToggleMessage()"
+          >Display Details</button>
+          <p *ngIf="pVisible">After Click Button</p>
+          <hr>
+          <div *ngFor="let toggleMessage of toggleMessages; let i = index">
+            <div [ngStyle]="{backgroundColor : i > 3 ? 'lightblue' : 'white'}"
+                [ngClass]="{whiteColor: i > 6}">
+              {{ i + 1 }} : {{ toggleMessage }}</div>
+          </div>
+      </div>
+    </div>
+  </div>
